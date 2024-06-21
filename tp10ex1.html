@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ex1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class='e'>HTML5</li>
+            <li>Css3</li>
+            <li class='e'>Javascript</li>
+        </ul>
+    </nav>
+    <section>
+        <form>
+            <label for="nn">Nom: </label>
+            <input type="text" id="nn"/>
+            <label for="pr" id='t'>Prenom: </label>
+            <input type="text" id="pr"/>
+            <input type="button" value="Tester"/>
+        </form>
+    </section>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+    $('.e').hide();
+    const numberOfInputs = $('input').length;
+    alert('Nombre d\'inputs dans la page: ' + numberOfInputs);
+
+    $('input[type="button"]').click(function() {
+        const nom = $('#nn').val();
+        const prenom = $('#pr').val();
+        alert('Nom: ' + nom + '\nPrénom: ' + prenom);
+    });
+});
+
+</script>
